@@ -7,7 +7,7 @@ class Movie
     public $description;
     public $rating;
     public $genre;
-
+    use PosterTrait;
     public function __construct($title, $year, $duration, $description, $rating, Genre $genre)
     {
         $this->title = $title;

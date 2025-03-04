@@ -1,6 +1,6 @@
 <?php
 //traits
-require_once "Traits/Director.php";
+require_once "Traits/Poster.php";
 //models
 require_once "Models/Genre.php";
 require_once "Models/Movie.php";
@@ -30,11 +30,17 @@ require_once "db.php";
         <div class="container">
             <div class="row row-cols-4">
                 <?php
+                //definizione dell'url per i film con il metodo setPoster del trait poster
+                $movies[0]->setPoster("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROl-dp49ZMCEy52_pvbpAfuWifAF2IS18gUQ&s");
+                $movies[1]->setPoster("https://pad.mymovies.it/filmclub/2015/04/052/locandina.jpg");
+                $movies[2]->setPoster("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROl-dp49ZMCEy52_pvbpAfuWifAF2IS18gUQ&s");
+
 
                 foreach ($movies as $movie) {
 
                     echo '<div class="col">';
                     echo '<div class="card" style="width: 18rem;">';
+                    echo $movie->displayPoster();
                     echo '<div class="card-body">';
                     echo "<h5 class='card-title'>{$movie->title}</h5>";
                     echo "<h6 class='card-subtitle mb-2 text-body-secondary'>{$movie->year}</h6>";
