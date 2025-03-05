@@ -20,6 +20,6 @@ trait PosterTrait
     // Visualizza il poster
     public function displayPoster()
     {
-        echo "<img src={$this->posterUrl} class=card-img-top alt=Poster di {$this->title}  />";
+        echo "<img src={$this->posterUrl} class='card-img-top img-card' alt=Poster di {$this->title}  />";
     }
 }

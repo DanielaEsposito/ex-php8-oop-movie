@@ -1,0 +1,15 @@
+/*RESET UTILS*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.img-container {
+  height: 300px;
+}
+.img-card {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}

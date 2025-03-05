@@ -10,6 +10,10 @@ class Genre
         $this->name = $name;
         $this->description = $description;
     }
+    public function getGenreName()
+    {
+        return implode(",", $this->name);
+    }
     public function getGenre()
     {
         return "Genere: " . implode(",", $this->name) . " - " . $this->description;
